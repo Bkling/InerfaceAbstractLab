@@ -1,50 +1,29 @@
 package lab1;
 
-/**
- * Describe responsibilities here.
- *
- * @author      your name goes here
- * @version     1.00
- */
-public class IntroJavaCourse {
-    String courseName;
-    private String courseNumber;
-    private double credits;
+import javax.swing.JOptionPane;
+
+public class IntroJavaCourse extends ProgrammingCourses {
+    //This class extends the Super-Class and inherits all the properites
+    //This property is unqiue for this class so it must remain
+
     private String prerequisites;
-
-    public IntroJavaCourse(String courseName, String courseNumber) {
-        this.courseName = courseName;
-        this.courseNumber = courseNumber;
-    }
-
-    public String getCourseNumber() {
-        return courseNumber;
-    }
-
-    public void setCourseNumber(String courseNumber) {
-        this.courseNumber = courseNumber;
-    }
-
-    public double getCredits() {
-        return credits;
-    }
-
 
     public String getPrerequisites() {
         return prerequisites;
     }
 
     public void setPrerequisites(String prerequisites) {
+        if (prerequisites == null || prerequisites.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: Prerequisites cannot be null of empty string");
+            System.exit(0);
+        }
         this.prerequisites = prerequisites;
     }
 
-        public void setCredits(double credits) {
-        if(credits < 0 || credits > 5.0) {
-            System.out.println(
-                    "Error: credits must be in the range 0.5 to 4.0");
-            System.exit(0);
-        }
-        this.setCredits(credits);
+    //Overrides the abstract method in the Super-Class
+    @Override
+    public String getCapitalizedCourseName() {
+        return this.getCourseName().toUpperCase();
     }
-
 }
