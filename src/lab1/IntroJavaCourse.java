@@ -2,7 +2,7 @@ package lab1;
 
 import javax.swing.JOptionPane;
 
-public class IntroJavaCourse extends ProgrammingCourses {
+public class IntroJavaCourse extends ProgrammingCourse {
     //This class extends the Super-Class and inherits all the properites
 
     //This property is unqiue for this class so it must remain

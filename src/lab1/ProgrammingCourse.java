@@ -2,7 +2,7 @@ package lab1;
 
 import javax.swing.JOptionPane;
 
-public abstract class ProgrammingCourses {
+public abstract class ProgrammingCourse {
     //This is the Abstract Super Class that the sub-classes will extend.
 
     //These are some of the properties that the sub-classes all use.
